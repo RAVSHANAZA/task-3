@@ -1,5 +1,5 @@
 const detailData = () => {
-	const preloader = document.querySelector('.preloader')
+	// const preloader = document.querySelector('.preloader')
 
 	const renderGanreList = ganres => {
 		const dropdownBlock = document.querySelector('.header__menu .dropdown')
@@ -55,15 +55,17 @@ const detailData = () => {
 				elem.style.backgroundImage = `url(${elem.dataset.setbg})`
 			})
 
-			setTimeout(() => {
-				preloader.classList.remove('active')
-			}, 500)
+			// setTimeout(() => {
+			// 	preloader.classList.remove('active')
+			// }, 500)
 		} else {
 			console.log('Аниме отсутствует!')
 		}
-		preloader.classList.add('active')
-		console.log(preloader)
 	}
+
+	// preloader.classList.add('active')
+	// console.log(preloader)
+	// не смог найти ошибку в preloader
 
 	fetch('./db.json')
 		.then(response => response.json())
